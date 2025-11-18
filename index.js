@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { Client, GatewayIntentBits, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder, SlashCommandBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
 const SteamAPI = require('steamapi');
 const steam = new SteamAPI(process.env.STEAM_API_KEY);
@@ -460,5 +459,6 @@ client.on('messageCreate', async (message) => {
     message.reply('Invalid link or private profile. Try again with a public profile.');
   }
 });
+
 
 client.login(process.env.BOT_TOKEN);
